@@ -12,7 +12,7 @@
   <div id="main"></div>
   <script src="elm.js"></script>
   <script>
-    var app = Elm.Main.fullscreen(localStorage.token || null);
+    var app = Elm.Main.init({flags: localStorage.token || null});
 
     app.ports.storeToken.subscribe(function(token) {
       localStorage.token = token;
