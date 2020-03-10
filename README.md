@@ -13,16 +13,13 @@
 
 ## How to run
 
-Clone the repository:
-
-```zsh
-➜ git clone https://github.com/apirobot/django-elm-auth-with-jwt.git
-```
+Clone the repository.
 
 Create and activate virtualenv:
 
 ```zsh
-➜  virtualenv -p python3 .venv
+➜  cd backend/
+➜  python3 -m venv .venv
 ➜  source .venv/bin/activate
 ```
 
@@ -30,20 +27,19 @@ Install dependencies:
 
 ```zsh
 ../backend  ➜  pip install -r requirements.txt
-../frontend ➜  elm-package install
+../frontend ➜  elm install
 ```
 
 Run migrations:
 
 ```zsh
-../backend ➜  python manage.py makemigrations
-../backend ➜  python manage.py migrate
+../backend ➜  ./manage.py migrate
 ```
 
 Start up backend:
 
 ```zsh
-../backend ➜  python manage.py runserver
+../backend ➜  ./manage.py runserver
 ```
 
 Start up frontend using `elm-live`:
